@@ -17,17 +17,17 @@ public class AuthorController {
     }
 
 
-    // Add Author
-    @PostMapping("/add-author")
-    public Author addAuthor(@RequestBody Author author) throws Exception {
-        return authorService.addAuthor(author);
-    }
-
-
     // Get Author by ID
     @PostMapping("/author-id")
     public Author getAuthorById(@RequestBody Integer id) throws Exception {
         return authorService.getAuthorById(id);
+    }
+
+
+    // Add Author
+    @PostMapping("/add-author")
+    public Author addAuthor(@RequestBody Author author) throws Exception {
+        return authorService.addAuthor(author);
     }
 
 

@@ -17,7 +17,7 @@ public class Book {
     private String title;
     private Integer price;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "author_id")
     private Author Author;
 }
