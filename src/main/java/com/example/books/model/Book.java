@@ -3,6 +3,8 @@ package com.example.books.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "books")
 @AllArgsConstructor
@@ -17,7 +19,7 @@ public class Book {
     private String title;
     private Integer price;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "author_id")
     private Author Author;
 }
